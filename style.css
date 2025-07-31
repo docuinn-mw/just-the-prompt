@@ -5,9 +5,18 @@ body {
     margin: 0;
     padding: 20px;
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; /* Allow main content to take up available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .container {
@@ -71,4 +80,47 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     font-size: 1.1em;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #666;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the About page */
+.about-container {
+    text-align: left;
+    max-width: 800px; /* Set a comfortable reading width */
+}
+
+.about-container h1 {
+    text-align: center; /* Keep the main heading centered */
+}
+
+.about-container p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 1em;
+}
+
+.about-container a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-container a:hover {
+    text-decoration: underline;
 }

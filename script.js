@@ -23,14 +23,23 @@ window.addEventListener("load", () => {
     const params = new URLSearchParams(window.location.search);
     const prompt = params.get("prompt");
     if (prompt) {
-        promptInput.value = prompt;
-        generateContent(prompt);
+        typeWriter(prompt, 0);
     }
 });
 
+function typeWriter(text, i) {
+    if (i < text.length) {
+        promptInput.value += text.charAt(i);
+        setTimeout(() => typeWriter(text, i + 1), 50); // 50ms delay between characters
+    } else {
+        // Finished typing, now generate the content
+        generateContent(text);
+    }
+}
+
 async function generateContent(prompt) {
     resultContainer.style.display = "block";
-    resultEl.textContent = "Generating...";
+    resultEl.textContent = "Expanding communication...";
 
     try {
         // We send the prompt to our serverless function, not directly to Google
