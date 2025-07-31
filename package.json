@@ -1,0 +1,14 @@
+{
+  "name": "just-the-prompt",
+  "version": "1.0.0",
+  "description": "A satirical site for LLM-generated messages.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
